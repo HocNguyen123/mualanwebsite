@@ -1,10 +1,10 @@
 import { Routes } from '@angular/router';
 
-import { HomeComponent } from './pages/home/home.component';
-import { AboutComponent } from './pages/about/about.component';
-import { GalleryComponent } from './pages/gallery/gallery.component';
-import { BookPerformanceComponent } from './pages/book-performance/book-performance.component';
-import { AdminDashboardComponent } from './pages/admin-dashboard/admin-dashboard.component';
+import { HomeComponent } from '../app/pages/home/home.component';
+import { AboutComponent } from '../app/pages/about/about.component';
+import { GalleryComponent } from '../app/pages/gallery/gallery.component';
+import { BookPerformanceComponent } from '../app/pages/book-performance/book-performance.component';
+import { AdminDashboardComponent } from '../app/pages/admin-dashboard/admin-dashboard.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },

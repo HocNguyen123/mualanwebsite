@@ -192,3 +192,60 @@ The section includes:
 - A call-to-action button linking users to the booking page
 
 The goal of this section is to quickly communicate the value of the platform and guide users toward submitting a booking request.
+
+---
+
+## Session 11 — Standalone Component Debugging and Routing Fixes
+
+During implementation of navigation between pages, several issues were encountered related to Angular standalone component configuration.
+
+The following fixes were implemented:
+
+- Ensured each page component declared `standalone: true`
+- Added required directive imports such as `RouterLink`
+- Verified router configuration in `app.routes.ts`
+- Confirmed router initialization through `provideRouter(routes)` in `app.config.ts`
+- Verified that `<router-outlet>` was correctly placed inside the root layout
+
+After correcting these issues, navigation between pages successfully worked through Angular’s router system.
+
+Users can now move between pages without full page reloads, confirming proper single-page application behavior.
+
+---
+
+## Session 12 — Booking Form Interface Implementation
+
+The first functional user interaction feature was implemented: the booking request form.
+
+The booking form was added to the **Book Performance** page and collects the following information:
+
+- Name
+- Phone number
+- Event date
+- Event type
+- Event location
+- Additional notes
+
+Angular's template-driven form system was implemented using `FormsModule` and `ngModel` to bind input fields to component state.
+
+When the form is submitted, the booking data is currently logged to the browser console. This confirms that form binding and submission events are working correctly.
+
+This interface will later be connected to a backend API so booking requests can be stored and managed through the admin dashboard.
+
+---
+
+## Session 13 — Development Environment Debugging
+
+While integrating Angular forms, a dependency caching issue occurred within the Angular Vite development server.
+
+The error originated from an outdated dependency pre-bundle inside Angular’s build cache.
+
+The issue was resolved by:
+
+- Stopping the development server
+- Removing the `.angular` cache directory
+- Restarting the Angular development server
+
+This forced Angular to rebuild its dependency graph and resolved the pre-bundling error.
+
+Documenting this issue helps ensure faster debugging if similar development environment problems occur in the future.

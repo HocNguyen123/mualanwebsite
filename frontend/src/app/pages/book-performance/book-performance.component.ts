@@ -1,9 +1,25 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-book-performance',
-  imports: [],
+  standalone: true,
+  imports: [FormsModule],
   templateUrl: './book-performance.html',
-  styleUrl: './book-performance.css',
+  styleUrl: './book-performance.css'
 })
-export class BookPerformanceComponent {}
+export class BookPerformanceComponent {
+
+  booking = {
+    name: '',
+    phone: '',
+    date: '',
+    eventType: '',
+    location: '',
+    notes: ''
+  };
+
+  submitBooking() {
+    console.log('Booking submitted:', this.booking);
+  }
+}

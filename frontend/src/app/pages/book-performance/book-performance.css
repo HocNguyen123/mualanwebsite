@@ -1,0 +1,25 @@
+.booking-page {
+  padding: 60px 40px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.booking-form input,
+.booking-form textarea {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.booking-form button {
+  padding: 12px;
+  background: #8b0000;
+  color: white;
+  border: none;
+  cursor: pointer;
+}

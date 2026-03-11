@@ -1,1 +1,29 @@
-<p>book-performance works!</p>
+<section class="booking-page">
+
+  <h1>Book a Lion Dance Performance</h1>
+
+  <form (ngSubmit)="submitBooking()" class="booking-form">
+
+    <label>Name</label>
+    <input type="text" [(ngModel)]="booking.name" name="name" required>
+
+    <label>Phone</label>
+    <input type="text" [(ngModel)]="booking.phone" name="phone" required>
+
+    <label>Event Date</label>
+    <input type="date" [(ngModel)]="booking.date" name="date" required>
+
+    <label>Event Type</label>
+    <input type="text" [(ngModel)]="booking.eventType" name="eventType">
+
+    <label>Location</label>
+    <input type="text" [(ngModel)]="booking.location" name="location">
+
+    <label>Additional Notes</label>
+    <textarea [(ngModel)]="booking.notes" name="notes"></textarea>
+
+    <button type="submit">Submit Booking</button>
+
+  </form>
+
+</section>
